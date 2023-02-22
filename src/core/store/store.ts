@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { phoneReducer } from "../../feature/phone/reducer/phone.reducer";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    phone: phoneReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
