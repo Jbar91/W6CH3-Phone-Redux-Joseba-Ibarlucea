@@ -1,10 +1,10 @@
-import React from "react";
+import { Info } from "../../feature/phone/components/info/info";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Phone</h1>
+      <Info></Info>
     </div>
   );
 }
