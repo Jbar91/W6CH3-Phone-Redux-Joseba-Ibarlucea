@@ -21,8 +21,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll --coverage",
+    "test:prod": "react-scripts test --watchAll --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +43,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/reportWebVitals.ts",
+      "<rootDir>/src/index.ts"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
